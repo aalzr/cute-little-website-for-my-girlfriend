@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d0b10">
+  <title>for my lily — you got this ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts"></div>
+
+  <main id="lock" class="screen">
+    <div class="lock-card">
+      <div class="eyebrow">a little place for you</div>
+      <div class="flower">✿</div>
+      <h1>for my lily</h1>
+      <p>before you go back to your college task,<br>open this first.</p>
+      <input id="password" type="password" placeholder="our little secret" autocomplete="off">
+      <button id="unlock">open it ♡</button>
+      <div id="error"></div>
+      <small>hint: the name i call you</small>
+    </div>
+  </main>
+
+  <main id="gift" class="hidden">
+    <section class="hero">
+      <div class="eyebrow">a tiny reminder from me</div>
+      <h1>you've got this.</h1>
+      <p>i know college can get exhausting.<br>so for a minute, don't think about the task.</p>
+      <button class="outline" onclick="go('letter')">come here for a second ↓</button>
+    </section>
+
+    <section id="letter" class="section">
+      <div class="eyebrow">01 — read this ya biy</div>
+      <div class="card letter">
+        <p>hi, bibup.</p>
+        <p>i know you're probably busy with your college task right now, and maybe you're already tired or stressed or wondering if you're doing enough.</p>
+        <p>but i want you to remember something:</p>
+        <p class="big">you don't have to have everything figured out at once.</p>
+        <p>just do the easiest one, finish one part then take a breath and then do the next one.</p>
+        <p>i'm really proud of you.</p>
+        <p>and if the task feels huge right now, that's okay. it doesn't mean you can't do it.</p>
+        <p class="pink">it just means you should take it one piece at a time.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">02 — emergency motivation</div>
+      <div class="motivation-grid">
+        <button class="motivation" data-msg="you've already gotten through hard things before, this is just another one.">i'm overwhelmed</button>
+        <button class="motivation" data-msg="you don't need to do it all at once, u just have to start.">i don't know where to start</button>
+        <button class="motivation" data-msg="take a rest for a bit, drink some water, then come back, i'm still rooting for you.">i'm tired</button>
+        <button class="motivation" data-msg="one wrong answer doesnt define your worth, keep going.">i think i'm not good enough</button>
+      </div>
+      <div id="motivationOutput" class="output">tap one whenever you need me.</div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">03 — your tasks checklist :</div>
+      <div class="card checklist">
+        <label><input type="checkbox"> visual storytelling task, this might be difficult butyou can do this sayang, im proud of you for being the producer and handles other members ^_^</label>
+        <label><input type="checkbox"> photography task = dof panjang and dof pendek, actually idk about those and it seems pretty complicated, but im sure you can do it!</label>
+        <label><input type="checkbox"> visual style exploration task, sounds pretty fun and probably challenging but im 100% sure that my pretty girl can do it :0</label>
+        <label><input type="checkbox"> animation production study task you gotta animate people weightlifting huh thats is actually kinda cool</label>
+        <label><input type="checkbox"> 3D art and form task, sheesh biy u are modelling ur 3D character?? cooolllll</label>
+        <label><input type="checkbox"> CB agama task, you're making proposal and interviews???, yeah i dont think its gonna be difficult for you except that youre just lazy :P</label>
+        <div class="progress"><span id="progress"></span></div>
+        <p id="progressText">0 / 6 done</p>
+      </div>
+    </section>
+
+    <section class="section photo-section">
+      <div class="eyebrow">04 — your reminder</div>
+      <div class="photo">
+        <div>
+          <div class="heart">♡</div>
+          <h2>this is my favorite photo of yours</h2>
+          <code><assets/her.jpg></code>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">05 — when you're finally done</div>
+      <div class="card done">
+        <h1>congratulations sayangku.</h1>
+        <p>whatever comes after this, i'm proud of you for getting through it baby</p>
+        <p>now close that damn laptop for a bit</p>
+        <p>dont forget to eat and drink a lot of water sayang</p>
+        <p>and come talk to me</p>
+        <p>im sorry if this probably wouldnt mean that much to you, but this is the thing that i can do for now</p>
+        <div class="signature">because i miss you too ♡</div>
+      </div>
+    </section>
+
+    <footer>made by someone who loves you :p</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
