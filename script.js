@@ -6,6 +6,7 @@ const input=document.getElementById("password"), error=document.getElementById("
 function openGift(){
   if(input.value.trim().toLowerCase()===PASSWORD){
     lock.classList.add("hidden"); gift.classList.remove("hidden"); window.scrollTo(0,0); hearts();
+    try{localStorage.setItem("precious-girl-unlocked","1")}catch(e){} // NEW
   }else{
     error.textContent="not quite ♡ try again";
     input.animate([{transform:"translateX(-5px)"},{transform:"translateX(5px)"},{transform:"translateX(0)"}],{duration:180});
@@ -13,6 +14,11 @@ function openGift(){
 }
 document.getElementById("unlock").onclick=openGift;
 input.onkeydown=e=>{if(e.key==="Enter")openGift()};
+
+
+try{
+  if(localStorage.getItem("precious-girl-unlocked")==="1"){lock.classList.add("hidden"); gift.classList.remove("hidden");}
+}catch(e){}
 
 function go(id){document.getElementById(id).scrollIntoView({behavior:"smooth"})}
 
@@ -25,7 +31,15 @@ checks.forEach(c=>c.onchange=()=>{
   const done=checks.filter(x=>x.checked).length;
   progress.style.width=(done/checks.length*100)+"%";
   progressText.textContent=`${done} / ${checks.length} done`;
+  try{localStorage.setItem("precious-girl-checklist",JSON.stringify(checks.map(x=>x.checked)))}catch(e){} // NEW
 });
+
+
+try{
+  const saved=JSON.parse(localStorage.getItem("precious-girl-checklist"))||[];
+  checks.forEach((c,i)=>{c.checked=!!saved[i]});
+  if(checks[0]) checks[0].onchange();
+}catch(e){}
 
 function hearts(){
   for(let i=0;i<12;i++)setTimeout(()=>{
