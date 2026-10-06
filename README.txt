@@ -1,4 +1,3 @@
-FOR MY LILY — COLLEGE ENCOURAGEMENT GIFT
 
 1. Password is: lily
 3. To change it, edit PASSWORD in script.js.
